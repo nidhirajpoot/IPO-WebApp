@@ -1,0 +1,237 @@
+/* Header */
+
+/* Overall Layout */
+.manage-layout {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar-container {
+  width: 250px;
+}
+
+/* Content beside sidebar */
+.manage-content {
+  flex-grow: 1;
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar-container {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.search-bar {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.notification-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.search-icon {
+  font-size: 20px;
+  cursor: pointer;
+
+  position: absolute;
+  top: 8%;
+  left: 65%;
+  /* Adjust to match the padding */
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #666;
+
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.register-ipo-button {
+  background-color: rgb(247, 246, 246);
+  color: rgb(67, 26, 216);
+  border: 1px solid rgb(67, 26, 216);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+h2 {
+  display: inline;
+}
+
+.register-ipo-button:hover {
+  background-color: rgb(244, 244, 244);
+}
+
+/* Title */
+.page-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-right: 60%;
+}
+
+/* Table */
+.ipo-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.ipo-table thead {
+  background-color: #f3f3f3;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.ipo-table th,
+.ipo-table td {
+  text-align: center;
+  padding: 12px 8px;
+}
+
+.ipo-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.ipo-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.ipo-table tbody tr:hover {
+  background-color: #ececec;
+  cursor: pointer;
+}
+
+/* Alternate row*/
+.ipo-table td {
+  font-size: 14px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  border: none;
+}
+
+.ipo-table th {
+  color: #555;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/* Status badges */
+.status {
+  width: 100px;
+  height: 40px;
+  /* padding: 1px; */
+  border-radius: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 14px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-top: 6px;
+  display: flex;
+}
+
+.status.ongoing {
+  background-color: #e0f8e9;
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.status.coming {
+  background-color: #fff7e0;
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+
+.status.new-listed {
+  background-color: #fde0e0;
+  color: #f44336;
+  border: 1px solid #f44336;
+}
+
+/* Update button */
+.update-button {
+  background-color: #6200ee;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 11px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.update-button:hover {
+  background-color: #4500bb;
+}
+
+/* Icons */
+.icon {
+  font-size: 18px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: left;
+  gap: 3px;
+}
+
+.page-button {
+  padding: 4px 6px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.page-button.active,
+.page-button:hover {
+  background-color: #6200ee;
+  color: white;
+  border-color: #6200ee;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .manage-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+.sidebar-container {
+  width: 250px;
+  background-color: #f8f7f7;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar-container {
+    width: 200px;
+    transform: translateX(-100%);
+    position: absolute;
+  }
+
+  .sidebar-open {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #1F384C;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+}
